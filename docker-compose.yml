@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  docker-get-url-hourly-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - URL
+      - SESSION_COOKIE
+    command: crond -f
