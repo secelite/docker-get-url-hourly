@@ -8,4 +8,5 @@ services:
     environment:
       - URL
       - SESSION_COOKIE
+      - SESSION_COOKIE_DELIMITER
     command: crond -f

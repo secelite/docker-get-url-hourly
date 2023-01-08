@@ -1,7 +1,7 @@
 FROM alpine:3.12
 
 # Install curl and cron
-RUN apk update && apk add curl
+RUN apk update && apk add curl bash
 
 # Create a working directory
 RUN mkdir /app
