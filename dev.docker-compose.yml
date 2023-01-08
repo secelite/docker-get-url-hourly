@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  docker-get-url-hourly-service:
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    environment:
+      - URL
+      - SESSION_COOKIE
+      - SESSION_COOKIE_DELIMITER
+    command: crond -f
+    volumes:
+      - ./src:/app
