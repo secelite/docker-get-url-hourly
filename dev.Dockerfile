@@ -13,8 +13,5 @@ COPY ./src/main.sh /app/main.sh
 # add executable flag to script
 RUN chmod +x /app/main.sh
 
-# Create a crontab file with the schedule for running the script
-RUN echo "5 * * * * /app/main.sh" > /var/spool/cron/crontabs/root
-
 # Start the cron daemon
 CMD crond -f
